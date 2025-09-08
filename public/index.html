@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Budget</title>
-    <meta name="description" content="A free personal budger app">
+    <!-- This is an SEO Change, making title more descriptive -->
+    <title>Personal Budget App | Free Personal Budget and Finance Planning App</title>
+    <meta name="description" content="A free personal budget app to track expenses, set alerts, and manage your money.">
     <meta name="keywords" content="app free budget finance">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+
+    <!-- This is an SEO Change, Open graph makes the site appear good on social media, and increased clicks and visits -->
+    <meta property="og:title"
+        content="A free personal budget app to track expenses, set alerts, and manage your money.">
+    <meta property="og:description"
+        content="Free personal budget app to track expenses, set alerts, and manage your money smarter.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://127.0.0.1:3000/personal-budget/public/index.html">
+    <meta property="og:image" content="http://127.0.0.1:3000/personal-budget/public/bg.png">
+
 </head>
+
 <body>
 
-<a href="#main" class="skip">Skip to content</a>
+    <a href="#main" class="skip">Skip to content</a>
 
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
-        </ul>
-    </nav>
 
-    <div class="hero">
-        <h1>Personal Budget</h1>
-        <h2>A personal-budget management app</h2>
-    </div>
+    <!-- This is a Semantic HTML Change -->
+    <!-- Enclosing the nav and div within a header element -->
 
-    <main class="center" id="main">
+    <!-- This is an A11y Change. Adding role for landmarks -->
+    <header role="banner">
+        <nav>
+            <ul>
+                <!-- This is an A11y Change. Helping users know which page they are currently on. -->
+                <li><a href="/" aria-current="page">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <!-- This is a Semantic HTML Change -->
+                <!-- Added a dot character to make login as a relative path to the file -->
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="https://google.com">Google</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>Personal Budget</h1>
+            <h2>A personal-budget management app</h2>
+        </div>
+    </header>
+
+    <!-- This is an A11y Change. Adding role for landmarks -->
+    <main role="main" class="center" id="main">
 
         <div class="page-area">
 
             <article>
-                <h1>Stay on track</h1>
+                <!-- This is a Semantic HTML Change -->
+                <!-- Replacing h1 with h2 tag, because this page already has an h1 header -->
+                <h2>Stay on track</h2>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
                     app will help you with that!
                 </p>
             </article>
-    
+
             <article>
-                <h1>Alerts</h1>
+                <h2>Alerts</h2>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </article>
-    
+
             <article>
-                <h1>Results</h1>
+                <h2>Results</h2>
                 <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!
-                    Also, they to live happier lives... since they expend without guilt or fear... 
+                    Also, they to live happier lives... since they expend without guilt or fear...
                     because they know it is all good and accounted for.
                 </p>
             </article>
-    
+
             <article>
-                <h1>Free</h1>
+                <h2>Free</h2>
                 <p>
                     This app is free!!! And you are the only one holding your data!
                 </p>
             </article>
-    
-            <article>
-                <h1>Stay on track</h1>
+
+            <!-- This is an A11y Change. Removed duplicated articles. -->
+
+            <!-- <article>
+                <h2>Stay on track</h2>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
@@ -73,56 +101,68 @@
             </article>
     
             <article>
-                <h1>Alerts</h1>
+                <h2>Alerts</h2>
                 <p>
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </article>
     
             <article>
-                <h1>Results</h1>
+                <h2>Results</h2>
                 <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!
                     Also, they to live happier lives... since they expend without guilt or fear... 
                     because they know it is all good and accounted for.
                 </p>
-            </article>
-    
+            </article> -->
+
             <article>
-                <h1>Chart</h1>
-                <p>
-                    <canvas id="myChart" width="400" height="400"></canvas>
-                </p>
+                <h2>Chart</h2>
+                <!-- This is a Semantic HTML Change -->
+                <!-- <p> element is replaced with figure, because this is the correct semantic tag for a chart or picture. 
+                    Also added a label. -->
+                <figure>
+                    <canvas id="myChart" width="400" height="400" aria-label="Personal Budget Chart"></canvas>
+
+                    <!-- This is an SEO Change. Adding figure caption to give a context to the search engines. -->
+                    <figcaption>A pie chart displaying budget categories and their allocations.</figcaption>
+
+                </figure>
             </article>
 
         </div>
 
     </main>
 
-    <footer class="bottom">
+    <!-- This is an A11y Change. Adding role for landmarks -->
+    <footer role="contentinfo" class="bottom">
         <div class="center">
-            All rights reserved &copy; Fabio Nolasco
+            All rights reserved &copy; Pavithra Selvan
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+        crossorigin="anonymous"></script>
 
     <script>
         var dataSource = {
-                datasets: [
-                    {
-                        data: [],
-                        backgroundColor: [
-                            '#ffcd56',
-                            '#ff6384',
-                            '#36a2eb',
-                            '#fd6b19',
-                        ]
-                    }
-                ],
-                labels: []
-            };
+            datasets: [
+                {
+                    data: [],
+                    backgroundColor: [
+                        '#ffcd56',
+                        '#ff6384',
+                        '#36a2eb',
+                        '#fd6b19',
+                    ]
+                }
+            ],
+            labels: []
+        };
 
         function createChart() {
             var ctx = document.getElementById('myChart').getContext('2d');
@@ -134,17 +174,18 @@
 
         function getBudget() {
             axios.get('http://localhost:3000/budget')
-            .then(function (res) {
-                for (var i = 0; i < res.data.myBudget.length; i++) {
-                    dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
-                    dataSource.labels[i] = res.data.myBudget[i].title;
-                    createChart();
-                }
-            });
+                .then(function (res) {
+                    for (var i = 0; i < res.data.myBudget.length; i++) {
+                        dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
+                        dataSource.labels[i] = res.data.myBudget[i].title;
+                        createChart();
+                    }
+                });
         }
 
         getBudget();
     </script>
 
 </body>
+
 </html>

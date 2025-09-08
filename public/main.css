@@ -9,7 +9,9 @@ body {
 
 nav {
     width: 100%;
-    background-color: #4d5791;
+    /* This is an A11y Change - changing color contrast to comply with minimum value 4.5:1 */
+    /* background-color: #4d5791; */
+    background-color: #1d245d;
     height: 44px;
     padding: 0 40px;
 }
@@ -34,12 +36,18 @@ nav ul li a {
 
 nav ul li a:hover  {
     background-color: white;
-    color: #4d5791;
+    /* This is an A11y Change - changing color contrast to comply with minimum value 4.5:1 */
+    /* color: #4d5791; */
+    color: #0d1a42;
 }
 
 div.hero {
     height: 350px;
     background-color: #b4c6f0;
+    color: #0d1a42;
+    /* This is an A11y Change - changing color contrast to comply with minimum value 4.5:1 */
+    /* background-color: #8093d1; */
+
     background-image: url('bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
@@ -54,13 +62,16 @@ div.hero h2 {
 }
 
 div.hero h1 {
-    color: #fff;
+    /* This is an A11y Change - changing color contrast to comply with minimum value 4.5:1 */
+    /* color: #fff; */
+    color: #0d1a42;
     font-size: 4.2em;
     margin-bottom: 20px;
 }
 
 div.hero h2 {
-    color: #4d5791;
+    color: #0d1a42;
+    
 }
 
 main {
@@ -71,11 +82,15 @@ main {
 .page-area {
     max-width: 768px;
     display: inline-block;
+    text-align: left;
 }
 
 footer {
     height: 50px;
     background-color: #b4c6f0;
+    /* This is an A11y Change - changing color contrast to comply with minimum value 4.5:1 */
+    color: #0e081a;
+    
     padding: 40px;
 }
 
@@ -105,5 +120,8 @@ main article {
 @media screen and (min-width: 768px) {
     main article {
         margin: 10px;
+        /* This is a Semantic HTML Change, to make the article elements top-aligned. otherwise, the "Results" article alone is coming far below because of the chart. */
+        vertical-align: top;
+        
     }
 }
